@@ -1,0 +1,5 @@
+Symlinking /home/jarne/Documents/catkin_ws/devel/lib/libtracer_gazebo.a
+Symlinking /home/jarne/Documents/catkin_ws/devel/lib/tracer_gazebo_sim/tracer_skid_steer_controller
+Symlinking /home/jarne/Documents/catkin_ws/devel/lib/pkgconfig/tracer_gazebo_sim.pc
+Symlinking /home/jarne/Documents/catkin_ws/devel/share/tracer_gazebo_sim/cmake/tracer_gazebo_simConfig.cmake
+Symlinking /home/jarne/Documents/catkin_ws/devel/share/tracer_gazebo_sim/cmake/tracer_gazebo_simConfig-version.cmake

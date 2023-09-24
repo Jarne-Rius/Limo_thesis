@@ -1,0 +1,15 @@
+Symlinking /home/jarne/Documents/catkin_ws/devel/lib/limo_base/limo_base_node
+Symlinking /home/jarne/Documents/catkin_ws/devel/lib/python3/dist-packages/limo_base/__init__.py
+Symlinking /home/jarne/Documents/catkin_ws/devel/lib/python3/dist-packages/limo_base/msg/__init__.py
+Symlinking /home/jarne/Documents/catkin_ws/devel/lib/python3/dist-packages/limo_base/msg/_LimoStatus.py
+Symlinking /home/jarne/Documents/catkin_ws/devel/include/limo_base/LimoStatus.h
+Symlinking /home/jarne/Documents/catkin_ws/devel/share/gennodejs/ros/limo_base/_index.js
+Symlinking /home/jarne/Documents/catkin_ws/devel/share/gennodejs/ros/limo_base/msg/_index.js
+Symlinking /home/jarne/Documents/catkin_ws/devel/share/gennodejs/ros/limo_base/msg/LimoStatus.js
+Symlinking /home/jarne/Documents/catkin_ws/devel/share/limo_base/cmake/limo_base-msg-paths.cmake
+Symlinking /home/jarne/Documents/catkin_ws/devel/share/roseus/ros/limo_base/manifest.l
+Symlinking /home/jarne/Documents/catkin_ws/devel/share/roseus/ros/limo_base/msg/LimoStatus.l
+Symlinking /home/jarne/Documents/catkin_ws/devel/share/common-lisp/ros/limo_base/msg/_package.lisp
+Symlinking /home/jarne/Documents/catkin_ws/devel/share/common-lisp/ros/limo_base/msg/limo_base-msg.asd
+Symlinking /home/jarne/Documents/catkin_ws/devel/share/common-lisp/ros/limo_base/msg/LimoStatus.lisp
+Symlinking /home/jarne/Documents/catkin_ws/devel/share/common-lisp/ros/limo_base/msg/_package_LimoStatus.lisp

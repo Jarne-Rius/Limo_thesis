@@ -1,0 +1,4 @@
+make[2]: *** No rule to make target '/usr/lib/x86_64-linux-gnu/libignition-math6.so.6.13.0', needed by '/home/jarne/Documents/catkin_ws/devel/.private/steer_drive_controller/lib/libsteer_drive_controller.so'.  Stop.
+make[1]: *** [CMakeFiles/Makefile2:2660: CMakeFiles/steer_drive_controller.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:141: all] Error 2

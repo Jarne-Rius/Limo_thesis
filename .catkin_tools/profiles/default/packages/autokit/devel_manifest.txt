@@ -1,0 +1,5 @@
+ugv_gazebo_sim/autokit
+/home/jarne/Documents/catkin_ws/devel/.private/autokit/cmake.lock /home/jarne/Documents/catkin_ws/devel/./cmake.lock
+/home/jarne/Documents/catkin_ws/devel/.private/autokit/lib/pkgconfig/autokit.pc /home/jarne/Documents/catkin_ws/devel/lib/pkgconfig/autokit.pc
+/home/jarne/Documents/catkin_ws/devel/.private/autokit/share/autokit/cmake/autokitConfig.cmake /home/jarne/Documents/catkin_ws/devel/share/autokit/cmake/autokitConfig.cmake
+/home/jarne/Documents/catkin_ws/devel/.private/autokit/share/autokit/cmake/autokitConfig-version.cmake /home/jarne/Documents/catkin_ws/devel/share/autokit/cmake/autokitConfig-version.cmake

@@ -1,0 +1,3 @@
+CMake Error: The source directory "/home/jarne/Documents/catkin_ws/src/limo_ros/limo_base" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+make: *** [Makefile:1222: cmake_check_build_system] Error 1

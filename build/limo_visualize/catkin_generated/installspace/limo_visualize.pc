@@ -1,0 +1,8 @@
+prefix=/home/jarne/Documents/catkin_ws/install
+
+Name: limo_visualize
+Description: Description of limo_visualize
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
