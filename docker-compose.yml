@@ -1,6 +1,6 @@
 version: '3'
 services:
-  ros_container:
+  dev:
     image: thesis
     environment:
       DISPLAY: ${DISPLAY}
@@ -12,12 +12,13 @@ services:
       - /etc/hosts:/etc/hosts
       - "${HOME}/.Xauthority:/root/.Xauthority:rw"
       - /Documents/git/Docker/directory_exam-ple:/root/launch_files
+      - /home/jarne/Documents/Thesis/Limo_thesis:/home/Thesis
     network_mode: host
     command: bash
     tty: true
     stdin_open: true
     restart: always
-    container_name: my_ros_container
+    container_name: dev
 
   roscore:
     container_name: roscore

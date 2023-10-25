@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Makes sure shell is using bash
 SHELL ["/bin/bash", "-c"]
 # Sets the directory on container start-up to /root/
-WORKDIR /home/
+WORKDIR /home/Thesis
 # ==================================================
 ### Initial updates/needed base packages
 ## rosdep
@@ -12,9 +12,7 @@ WORKDIR /home/
 
 
 WORKDIR /home
-RUN mkdir Thesis
 ADD /src/  /home/Thesis/src 
-ADD /devel/  /home/Thesis/devel
 RUN sudo rosdep fix-permissions
 RUN rosdep update
 RUN sudo rosdep fix-permissions; 
