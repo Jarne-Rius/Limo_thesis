@@ -1,0 +1,31 @@
+version: '3'
+services:
+  ros_container:
+    image: thesis
+    environment:
+      DISPLAY: ${DISPLAY}
+      FILE_PATH: /root/launch_files/
+      ROS_MASTER_URI: http://localhost:11311
+    depends_on:
+      - roscore
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - "${HOME}/.Xauthority:/root/.Xauthority:rw"
+      - /Documents/git/Docker/directory_exam-ple:/root/launch_files
+    network_mode: host
+    command: bash
+    tty: true
+    stdin_open: true
+    restart: always
+    container_name: my_ros_container
+
+  roscore:
+    container_name: roscore
+    image: thesis
+    network_mode: "host"
+    restart: always
+    tty: true
+    privileged: true
+    command: roscore
+
+

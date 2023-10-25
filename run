@@ -1,0 +1,151 @@
+#!/bin/bash
+
+function build {
+    docker build -t thesis .
+}
+
+function post-install {
+    # Install pre-commit hook
+    touch env-vars.sh
+    sudo chmod +x env-vars.sh
+
+    # Depends on your terminal
+    input_string="alias thesis=\"docker exec -it dev zsh\""
+    file="/home/$(whoami)/.zshrc"
+    
+    if [ ! -f "$file" ]; then
+        touch "$file"
+    fi
+    if grep -q "^alias thesis=" "$file"; then
+        sed -i "s#^alias thesis=.*#$input_string#" "$file"
+    else
+        echo "$input_string" >> "$file"
+    fi
+
+    file="/home/$(whoami)/.bashrc"
+    if [ ! -f "$file" ]; then
+        touch "$file"
+    fi
+    if grep -q "^alias thesis=" "$file"; then
+        sed -i "s#^alias thesis=.*#$input_string#" "$file"
+    else
+        echo "$input_string" >> "$file"
+    fi
+    
+    # Default ROS master uri and hostname
+    set-env "ROS_MASTER_URI" "http://localhost:11311"
+    set-env "ROS_HOSTNAME" "localhost"
+}
+
+function install {
+    build
+    
+    if docker info | grep -i runtime | grep -q "nvidia"; then
+        echo "NVIDIA runtime is in use."
+    else
+        echo "NVIDIA runtime is not installed. Please follow https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html or use the 'nogpu' commands ('install-nogpu')"
+        exit 1
+    fi
+    
+    _set-docker-runtime nvidia
+    
+    post-install
+}
+
+function _set-docker-runtime {
+    # Check if jq (a JSON processor) is installed
+    if ! command -v jq &>/dev/null; then
+        echo "Error: 'jq' is not installed."
+        sudo apt install jq
+    fi
+    
+    echo "Don't worry about 'jq' compile errors. They are used as checks."
+    
+    # Set the new runtime value
+    new_runtime=$1
+    
+    # Check if the Docker daemon configuration file exists
+    if [ -f /etc/docker/daemon.json ]; then
+        # Configuration file exists, update the 'default-runtime' value if it exists
+        if jq -e ".default-runtime" /etc/docker/daemon.json > /dev/null; then
+            # Update the existing 'default-runtime' value
+            jq ".default-runtime = \"$new_runtime\"" /etc/docker/daemon.json > /tmp/daemon.json.tmp
+            mv /tmp/daemon.json.tmp /etc/docker/daemon.json
+            echo "Updated 'default-runtime' to '$new_runtime' in /etc/docker/daemon.json"
+        else
+            # Add the 'default-runtime' key to the configuration file
+            jq ". + {\"default-runtime\": \"$new_runtime\"}" /etc/docker/daemon.json > /tmp/daemon.json.tmp
+            sudo mv /tmp/daemon.json.tmp /etc/docker/daemon.json
+            echo "Added 'default-runtime' with value '$new_runtime' to /etc/docker/daemon.json"
+        fi
+    else
+        # Configuration file doesn't exist, create it with 'default-runtime' set
+        sudo echo "{\"default-runtime\": \"$new_runtime\"}" > /etc/docker/daemon.json
+        echo "Created /etc/docker/daemon.json with 'default-runtime' set to '$new_runtime'"
+    fi
+    
+    # Restart Docker to apply the changes
+    sudo systemctl restart docker
+    
+    echo "Docker daemon configuration updated. Docker has been restarted."
+}
+
+function set-env {
+    input_string="export $1=$2"
+    env_vars_file="env-vars.sh"
+    
+    if [ ! -f "$env_vars_file" ]; then
+        touch "$env_vars_file"
+    fi
+    
+    if grep -q "^export $1=" "$env_vars_file"; then
+        sed -i "s#^export $1=.*#$input_string#" "$env_vars_file"
+        echo "env variable '$1' updated to '$2'"
+    else
+        echo "$input_string" >> "$env_vars_file"
+        echo "env variable '$1' set to '$2'"
+    fi
+}
+
+function start {
+    
+    file="env-vars.sh"
+    
+    if [ ! -e "$file" ]; then
+        echo "Error: File '$file' does not exist. Please run 'post-install' or set a car with 'set-car'";
+        echo "lol"
+        exit 324;
+    fi
+    
+    docker compose up -d dev roscore rviz
+}
+
+function clean {
+    PREFIX=$1
+    shift
+    if [ -z "$PREFIX" ]
+    then
+        echo "Please provide a prefix."
+        exit 1
+    fi
+    
+    CONTAINERS=$(docker ps -q --filter name=$PREFIX*)
+    
+    if [ -n "$CONTAINERS" ]; then
+        echo "$CONTAINERS" | xargs docker rm -f
+    else
+        echo "No containers found matching the filter criteria."
+    fi
+}
+
+function stop {
+    docker compose down
+}
+
+function help {
+    echo "$0 <task> <args>"
+    echo "Tasks:"
+    compgen -A function | cat -n
+}
+
+${@:-default}
