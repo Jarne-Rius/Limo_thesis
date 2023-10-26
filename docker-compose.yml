@@ -29,4 +29,23 @@ services:
     privileged: true
     command: roscore
 
+  gazebo:
+    image: woensugchoi/glider_hybrid_whoi:latest
+    environment:
+      DISPLAY: ${DISPLAY}
+      FILE_PATH: /root/launch_files/
+      ROS_MASTER_URI: http://localhost:11311
+    volumes:
+      - /Documents/git/Docker/directory_exam-ple:/root/launch_files
+      - /home/jarne/Documents/Thesis/Limo_thesis:/home/Thesis
+    command:
+      - roslaunch
+      - --wait
+      - /home/Thesis/src/ugv_sim/limo/limo_gazebo_sim/launch/limo_ackerman.launch
+      - latitude:=${LATITUDE:-41.5522}
+      - longitude:=${LONGITUDE:--70.6803}
+    privileged: true
+
+
+
 

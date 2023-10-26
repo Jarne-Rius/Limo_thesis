@@ -10,14 +10,39 @@ WORKDIR /home/Thesis
 ## rosdep
 # Fix permissions for rosdep
 
-
-WORKDIR /home
 ADD /src/  /home/Thesis/src 
 RUN sudo rosdep fix-permissions
 RUN rosdep update
 RUN sudo rosdep fix-permissions; 
 RUN sudo echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
-    ##
+
+RUN apt-get update && apt-get install -y ros-noetic-tf2-geometry-msgs \
+    python3-catkin-tools \
+    ros-noetic-rqt-multiplot  \
+    ros-noetic-joy \
+    ros-noetic-perception-pcl \
+    ros-noetic-image-transport \
+    ros-noetic-tf2-geometry-msgs \
+    ros-noetic-robot-localization \
+    ros-noetic-laser-assembler \
+    ros-noetic-perception-pcl \
+    ros-noetic-can-msgs \
+    ros-noetic-cv-bridge \
+    ros-noetic-nmea-navsat-driver \
+    ros-noetic-rosbridge-suite \
+    ros-noetic-catkin-virtualenv \
+    ros-noetic-ros-control \
+    ros-noetic-ros-controllers \
+    ros-noetic-rosparam-shortcuts \
+    ros-noetic-image-geometry \
+    ros-noetic-robot-pose-ekf\
+    python3-catkin-tools \
+    libyaml-cpp-dev \
+    libcurl4-openssl-dev \
+    python3-pcl \
+    pcl-tools
+    
+RUN apt-get update && apt-get install -q -y ros-noetic-hector-gazebo-plugins
     ## Essential packages
     # Update and Upgrade apt-get
 RUN sudo apt-get update && sudo apt-get upgrade -y
