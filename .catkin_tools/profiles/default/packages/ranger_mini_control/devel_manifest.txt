@@ -1,5 +1,0 @@
-ugv_gazebo_sim/ranger_mini_V2/ranger_mini_control
-/home/jarne/Documents/catkin_ws/devel/.private/ranger_mini_control/cmake.lock /home/jarne/Documents/catkin_ws/devel/./cmake.lock
-/home/jarne/Documents/catkin_ws/devel/.private/ranger_mini_control/lib/pkgconfig/ranger_mini_control.pc /home/jarne/Documents/catkin_ws/devel/lib/pkgconfig/ranger_mini_control.pc
-/home/jarne/Documents/catkin_ws/devel/.private/ranger_mini_control/share/ranger_mini_control/cmake/ranger_mini_controlConfig.cmake /home/jarne/Documents/catkin_ws/devel/share/ranger_mini_control/cmake/ranger_mini_controlConfig.cmake
-/home/jarne/Documents/catkin_ws/devel/.private/ranger_mini_control/share/ranger_mini_control/cmake/ranger_mini_controlConfig-version.cmake /home/jarne/Documents/catkin_ws/devel/share/ranger_mini_control/cmake/ranger_mini_controlConfig-version.cmake

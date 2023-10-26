@@ -1,5 +1,0 @@
-ugv_gazebo_sim/tracer_mini
-/home/jarne/Documents/catkin_ws/devel/.private/tracer_mini/cmake.lock /home/jarne/Documents/catkin_ws/devel/./cmake.lock
-/home/jarne/Documents/catkin_ws/devel/.private/tracer_mini/lib/pkgconfig/tracer_mini.pc /home/jarne/Documents/catkin_ws/devel/lib/pkgconfig/tracer_mini.pc
-/home/jarne/Documents/catkin_ws/devel/.private/tracer_mini/share/tracer_mini/cmake/tracer_miniConfig.cmake /home/jarne/Documents/catkin_ws/devel/share/tracer_mini/cmake/tracer_miniConfig.cmake
-/home/jarne/Documents/catkin_ws/devel/.private/tracer_mini/share/tracer_mini/cmake/tracer_miniConfig-version.cmake /home/jarne/Documents/catkin_ws/devel/share/tracer_mini/cmake/tracer_miniConfig-version.cmake

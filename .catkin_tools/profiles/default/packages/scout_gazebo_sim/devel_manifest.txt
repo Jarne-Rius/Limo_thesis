@@ -1,7 +1,0 @@
-ugv_gazebo_sim/scout/scout_gazebo_sim
-/home/jarne/Documents/catkin_ws/devel/.private/scout_gazebo_sim/cmake.lock /home/jarne/Documents/catkin_ws/devel/./cmake.lock
-/home/jarne/Documents/catkin_ws/devel/.private/scout_gazebo_sim/lib/libscout_gazebo.a /home/jarne/Documents/catkin_ws/devel/lib/libscout_gazebo.a
-/home/jarne/Documents/catkin_ws/devel/.private/scout_gazebo_sim/lib/scout_gazebo_sim/scout_skid_steer_controller /home/jarne/Documents/catkin_ws/devel/lib/scout_gazebo_sim/scout_skid_steer_controller
-/home/jarne/Documents/catkin_ws/devel/.private/scout_gazebo_sim/lib/pkgconfig/scout_gazebo_sim.pc /home/jarne/Documents/catkin_ws/devel/lib/pkgconfig/scout_gazebo_sim.pc
-/home/jarne/Documents/catkin_ws/devel/.private/scout_gazebo_sim/share/scout_gazebo_sim/cmake/scout_gazebo_simConfig.cmake /home/jarne/Documents/catkin_ws/devel/share/scout_gazebo_sim/cmake/scout_gazebo_simConfig.cmake
-/home/jarne/Documents/catkin_ws/devel/.private/scout_gazebo_sim/share/scout_gazebo_sim/cmake/scout_gazebo_simConfig-version.cmake /home/jarne/Documents/catkin_ws/devel/share/scout_gazebo_sim/cmake/scout_gazebo_simConfig-version.cmake

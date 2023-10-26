@@ -1,7 +1,0 @@
-ugv_gazebo_sim/ranger_mini_V2/four_wheel_steering_controller
-/home/jarne/Documents/catkin_ws/devel/.private/four_wheel_steering_controller/cmake.lock /home/jarne/Documents/catkin_ws/devel/./cmake.lock
-/home/jarne/Documents/catkin_ws/devel/.private/four_wheel_steering_controller/lib/libfour_wheel_steering_controller.so /home/jarne/Documents/catkin_ws/devel/lib/libfour_wheel_steering_controller.so
-/home/jarne/Documents/catkin_ws/devel/.private/four_wheel_steering_controller/lib/four_wheel_steering_controller/four_wheel_steering /home/jarne/Documents/catkin_ws/devel/lib/four_wheel_steering_controller/four_wheel_steering
-/home/jarne/Documents/catkin_ws/devel/.private/four_wheel_steering_controller/lib/pkgconfig/four_wheel_steering_controller.pc /home/jarne/Documents/catkin_ws/devel/lib/pkgconfig/four_wheel_steering_controller.pc
-/home/jarne/Documents/catkin_ws/devel/.private/four_wheel_steering_controller/share/four_wheel_steering_controller/cmake/four_wheel_steering_controllerConfig.cmake /home/jarne/Documents/catkin_ws/devel/share/four_wheel_steering_controller/cmake/four_wheel_steering_controllerConfig.cmake
-/home/jarne/Documents/catkin_ws/devel/.private/four_wheel_steering_controller/share/four_wheel_steering_controller/cmake/four_wheel_steering_controllerConfig-version.cmake /home/jarne/Documents/catkin_ws/devel/share/four_wheel_steering_controller/cmake/four_wheel_steering_controllerConfig-version.cmake

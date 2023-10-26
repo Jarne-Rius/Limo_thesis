@@ -1,7 +1,0 @@
-ugv_gazebo_sim/hunter/steer_drive_controller
-/home/jarne/Documents/catkin_ws/devel/.private/steer_drive_controller/cmake.lock /home/jarne/Documents/catkin_ws/devel/./cmake.lock
-/home/jarne/Documents/catkin_ws/devel/.private/steer_drive_controller/lib/libsteer_drive_controller.so /home/jarne/Documents/catkin_ws/devel/lib/libsteer_drive_controller.so
-/home/jarne/Documents/catkin_ws/devel/.private/steer_drive_controller/lib/steer_drive_controller/steer_drive_controller_steerbot /home/jarne/Documents/catkin_ws/devel/lib/steer_drive_controller/steer_drive_controller_steerbot
-/home/jarne/Documents/catkin_ws/devel/.private/steer_drive_controller/lib/pkgconfig/steer_drive_controller.pc /home/jarne/Documents/catkin_ws/devel/lib/pkgconfig/steer_drive_controller.pc
-/home/jarne/Documents/catkin_ws/devel/.private/steer_drive_controller/share/steer_drive_controller/cmake/steer_drive_controllerConfig-version.cmake /home/jarne/Documents/catkin_ws/devel/share/steer_drive_controller/cmake/steer_drive_controllerConfig-version.cmake
-/home/jarne/Documents/catkin_ws/devel/.private/steer_drive_controller/share/steer_drive_controller/cmake/steer_drive_controllerConfig.cmake /home/jarne/Documents/catkin_ws/devel/share/steer_drive_controller/cmake/steer_drive_controllerConfig.cmake
