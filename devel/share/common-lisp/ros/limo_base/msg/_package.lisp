@@ -1,7 +1,1 @@
-(cl:defpackage limo_base-msg
-  (:use )
-  (:export
-   "<LIMOSTATUS>"
-   "LIMOSTATUS"
-  ))
-
+/home/jarne/Documents/Thesis/Limo_thesis/devel/.private/limo_base/share/common-lisp/ros/limo_base/msg/_package.lisp

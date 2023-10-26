@@ -1,8 +1,1 @@
-
-"use strict";
-
-let LimoStatus = require('./LimoStatus.js');
-
-module.exports = {
-  LimoStatus: LimoStatus,
-};
+/home/jarne/Documents/Thesis/Limo_thesis/devel/.private/limo_base/share/gennodejs/ros/limo_base/msg/_index.js

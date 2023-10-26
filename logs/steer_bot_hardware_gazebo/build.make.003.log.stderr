@@ -1,3 +1,0 @@
-make[2]: *** No rule to make target '/usr/lib/x86_64-linux-gnu/libignition-math6.so.6.13.0', needed by '/home/jarne/Documents/catkin_ws/devel/.private/steer_bot_hardware_gazebo/lib/libsteer_bot_hardware_gazebo.so'.  Stop.
-make[1]: *** [CMakeFiles/Makefile2:1380: CMakeFiles/steer_bot_hardware_gazebo.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

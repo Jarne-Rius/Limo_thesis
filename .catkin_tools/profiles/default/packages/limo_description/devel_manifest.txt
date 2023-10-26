@@ -1,2 +1,2 @@
-ugv_gazebo_sim/limo/limo_description
-/home/jarne/Documents/catkin_ws/devel/.private/limo_description/cmake.lock /home/jarne/Documents/catkin_ws/devel/./cmake.lock
+ugv_sim/limo/limo_description
+/home/jarne/Documents/Thesis/Limo_thesis/devel/.private/limo_description/cmake.lock /home/jarne/Documents/Thesis/Limo_thesis/devel/./cmake.lock

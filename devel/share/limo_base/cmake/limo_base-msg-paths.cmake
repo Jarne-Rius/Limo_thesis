@@ -1,4 +1,1 @@
-# generated from genmsg/cmake/pkg-msg-paths.cmake.develspace.in
-
-set(limo_base_MSG_INCLUDE_DIRS "/home/jarne/Documents/catkin_ws/src/limo_ros/limo_base/msg")
-set(limo_base_MSG_DEPENDENCIES std_msgs)
+/home/jarne/Documents/Thesis/Limo_thesis/devel/.private/limo_base/share/limo_base/cmake/limo_base-msg-paths.cmake
