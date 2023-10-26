@@ -1,1 +1,0 @@
-/home/jarne/Documents/Thesis/Limo_thesis/devel/.private/Limo_movement/lib/pkgconfig/Limo_movement.pc

@@ -1,8 +1,0 @@
-prefix=/home/jarne/Documents/Thesis/Limo_thesis/devel/.private/Limo_movement
-
-Name: Limo_movement
-Description: Description of Limo_movement
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

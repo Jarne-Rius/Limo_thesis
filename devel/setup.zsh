@@ -1,1 +1,0 @@
-/home/jarne/Documents/Thesis/Limo_thesis/devel/.private/catkin_tools_prebuild/setup.zsh
