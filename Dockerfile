@@ -37,10 +37,13 @@ RUN apt-get update && apt-get install -y\
     ros-noetic-tf2-geometry-msgs \
     ros-noetic-catkin-virtualenv \
     ros-noetic-ros-control \
+    ros-noetic-slam-gmapping \
     ros-noetic-ros-controllers \
     ros-noetic-rosparam-shortcuts \
+    ros-noetic-robot-pose-ekf \
     ros-noetic-image-geometry \
-    python3-catkin-tools 
+    python3-catkin-tools \
+    ros-noetic-robot-localization
 
 #pip installations
 COPY requirements.txt requirements.txt
