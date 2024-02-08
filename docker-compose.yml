@@ -38,6 +38,7 @@ services:
     tty: true
     restart: always
     stdin_open: true
+    privileged: true
 
   gazebo:
     depends_on:
@@ -52,4 +53,5 @@ services:
       - "./:/home/thesis:rw"
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
     tty: true
+    privileged: true
     stdin_open: true
