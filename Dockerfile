@@ -40,6 +40,10 @@ RUN apt-get update && apt-get install -y\
     ros-noetic-ros-controllers \
     ros-noetic-rosparam-shortcuts \
     ros-noetic-image-geometry \
+    ros-noetic-robot-pose-ekf \
+    ros-noetic-navigation\
+    ros-noetic-gmapping\
+    ros-noetic-behaviortree-cpp\
     python3-catkin-tools 
 
 #pip installations

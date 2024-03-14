@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y\
     ros-noetic-robot-pose-ekf \
     ros-noetic-navigation\
     ros-noetic-gmapping\
+    ros-noetic-behaviortree-cpp\
     python3-catkin-tools 
 
 RUN apt-get update\

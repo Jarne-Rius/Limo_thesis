@@ -11,7 +11,7 @@ function startLimo {
 }
 
 function start {
-    docker compose up -d terminal rviz
+    docker compose up -d terminal rvizlimo
 }
 
 function startsim {
@@ -19,6 +19,7 @@ function startsim {
 }
 
 function terminal {
+    docker compose up -d roscore terminal
 	docker exec -it terminal /bin/zsh
 }
 
@@ -59,7 +60,9 @@ function PRINT_MENU()
     echo -e "2.Start Limo"
     echo -e "3.Start sim"
     echo -e "4.Start rvizToLimo"
-    echo -e "5.Stop"
+    echo -e "5.Start terminal"
+    echo -e "6.Stop"
+
     echo -n "Your chose(1-5):"
 }
 
@@ -80,8 +83,10 @@ case "${CHOOSE}" in
     4)
     start
     ;;
-    5)
+    5) 
+    terminal
+    ;;
+    6)
     stop
     ;;
-
 esac    
