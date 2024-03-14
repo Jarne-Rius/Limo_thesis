@@ -1,14 +1,21 @@
 #!/bin/bash
 xhost +
 function build {
+    docker build -f Dockerfilelimo -t thesislimo .
 	docker build -t thesis .
 }
 
-function start {
-	docker compose up -d roscore terminal rviz gazebo
+function startLimo {
+    docker build -t thesis .
+	docker compose up -d terminalLimo
 }
-function startNoSim {
-	docker compose up -d roscore terminal rviz
+
+function start {
+    docker compose up -d terminal rviz
+}
+
+function startsim {
+	docker compose up -d roscore terminal rviz gazebo
 }
 
 function terminal {
@@ -44,4 +51,37 @@ function help {
     echo "Tasks:"
     compgen -A function | cat -n
 }
-${@:-start}
+
+function PRINT_MENU()
+{
+    echo -e "\e[1;10H Menu"
+    echo -e "1.Build images"
+    echo -e "2.Start Limo"
+    echo -e "3.Start sim"
+    echo -e "4.Start rvizToLimo"
+    echo -e "5.Stop"
+    echo -n "Your chose(1-5):"
+}
+
+PRINT_MENU
+
+read CHOOSE
+
+case "${CHOOSE}" in
+    1)
+    build
+    ;;
+    2)
+    startLimo
+    ;;
+    3)
+    startsim
+    ;;
+    4)
+    start
+    ;;
+    5)
+    stop
+    ;;
+
+esac    
