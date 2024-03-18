@@ -1,8 +1,69 @@
  <root BTCPP_format="4" >
-     <BehaviorTree ID="MainTree">
+    <BehaviorTree ID="MainTree">
         <Sequence name="root">
-            <AlwaysSuccess/>
-            <Brake  name="Brake_limo" />
+            <SubTree ID="BatteryCheck"/>
+            <SubTree ID="RobotMove"/>
         </Sequence>
-     </BehaviorTree>
+    </BehaviorTree>
+
+    <BehaviorTree ID="BatteryCheck">
+        <Fallback name="BatteryCheck">
+            <Condition ID="BatteryChecking"/>
+            <Action ID="Brake"/>
+        </Fallback>
+    </BehaviorTree>
+    
+    <BehaviorTree ID="RobotMove">
+        <Parallel max_failures="1" name="RobotMove">
+            <Sequence name="Movement">
+                <SubTree ID="Emergency"/>
+                <SubTree ID="TargetCheck"/>
+                <SubTree ID="Moving"/>
+            </Sequence>
+            <Action ID="TrackObject"/>
+        </Parallel>
+    </BehaviorTree>
+
+    <BehaviorTree ID="Emergency">
+        <Sequence>
+            <Condition ID="MinDistance"/>
+            <Fallback name="DistanceBased">
+                <Sequence>
+                    <Condition ID="SpeedNotZero"/>
+                    <Action ID="EmergencyBrake"/>
+                </Sequence>
+                <Sequence>
+                    <Condition ID="SpeedZero"/>
+                    <Action ID="RotateAround"/>
+                </Sequence>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="DoorClosed">
+        <Fallback>
+            <Condition ID="TargetFound"/>
+            <Action ID="RotateAround"/>
+        </Fallback>
+    </BehaviorTree>
+    
+    <BehaviorTree ID="TargetCheck">
+        <Fallback name="TargetCheck">
+            <Condition ID="TargetFound"/>
+            <Action ID="RotateAround"/>
+        </Fallback>
+    </BehaviorTree>
+    
+    <BehaviorTree ID="Moving">
+        <Fallback name="Moving">
+            <Sequence>
+                <Condition ID="ToCloseToTarget"/>
+                <Action ID="MoveBack"/>
+            </Sequence>
+            <Sequence>
+                <Condition ID="CloseEnough"/>
+                <Action ID="MoveToTarget"/>
+            </Sequence>
+        </Fallback>
+    </BehaviorTree>
  </root>

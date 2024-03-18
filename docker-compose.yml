@@ -50,8 +50,6 @@ services:
     privileged: true
   
   terminallimo:
-    depends_on:
-      - roscore
     container_name: terminallimo
     image: thesislimo
     network_mode: host
@@ -60,6 +58,7 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
     tty: true
     stdin_open: true
+
 
   roscorelimo:
     container_name: roscorelimo

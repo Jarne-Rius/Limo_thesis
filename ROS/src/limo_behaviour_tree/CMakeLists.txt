@@ -10,7 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  behaviortree_cpp
+  behaviortree_cpp_v3
   roscpp
 )
 
@@ -121,6 +121,8 @@ include_directories(
 # include
   include
   include/${PROJECT_NAME}
+  include/Actions
+  include/Conditions
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -138,12 +140,15 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 
+file(GLOB srcs src/Actions/*.cpp src/Conditions/*.cpp include/Actions/*.h include/Conditions/*.h*)
+
+#add_executable(limo_behaviour_tree ${srcs})
 ##Reminder to myself, if we add an new cpp file add it for executable as well.
-add_executable(
-  ${PROJECT_NAME}_node src/limo_behaviour_tree.cpp
-  tree.xml
-  src/Brake.cpp
-)
+ add_executable(
+   ${PROJECT_NAME}_node src/limo_behaviour_tree.cpp
+   tree.xml
+   ${srcs}
+ )
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

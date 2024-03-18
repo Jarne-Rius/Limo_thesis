@@ -6,15 +6,23 @@ function build {
 }
 
 function startLimo {
-    docker build -t thesis .
-	docker compose up -d terminalLimo
+    clean terminallimo
+    docker build -f Dockerfilelimo -t thesislimo .
+	docker compose up -d terminallimo
+	docker exec -it terminallimo /bin/zsh
 }
 
 function start {
-    docker compose up -d terminal rvizlimo
+    clean terminallimo
+    docker compose up -d terminallimo
+	docker exec -it terminallimo /bin/zsh
 }
 
 function startsim {
+    clean gazebo
+    clean rvizlimo
+    clean terminal
+    clean roscore
 	docker compose up -d roscore terminal rviz gazebo
 }
 
